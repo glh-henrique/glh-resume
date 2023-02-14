@@ -1,140 +1,124 @@
-/*------------------------------------------------------------------
+import { createGlobalStyle } from "styled-components";
+import { theme } from "./theme";
 
-version 1.1
+const GlobalStyle = createGlobalStyle`
 
-[Table of contents]
-1. Global CSS
-2. Header / Menu CSS
-3. Home Section CSS 
-4. Service Section CSS
-5. About Section CSS
-6. Portfolio Section CSS
-    6.1 Pretty Photo CSS
-7. Blog Section CSS
-8. Skills Section CSS
-9. Contact Section CSS
-10. Single Blog / Post Page CSS
-11. Responsive CSS
-
--------------------------------------------------------------------*/
-
-
-/* ===================================
-    1. Global CSS
-====================================== */
-
-/* * {
-    box-sizing: border-box;
-    outline: none !important;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+* {
+  box-sizing: border-box;
+  outline: none !important;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 *::selection {
-    background: #fff0f0;
+  background: ${theme.colors.secondaryLight};
 }
 
 body {
-    color: #000000;
-    line-height: 2;
-    font-size: 15px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    min-width: 320px;
-    position: relative;
-    overflow-x: hidden;
-    background: linear-gradient(to right, #fff0f0 0%, #fff0f0 60%, white 60%);
-    background-position: center;
+  color: ${theme.colors.primary};
+  line-height: 2;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  min-width: 320px;
+  position: relative;
+  overflow-x: hidden;
+  background: linear-gradient(to right, ${theme.colors.secondaryLight} 0%, ${theme.colors.secondaryLight} 60%, white 40%);
+  background-position: center;
 }
 
 p {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 a {
-    text-decoration: none;
-    color: #000;
-    transition: .35s ease-out;
+  text-decoration: none;
+  color: ${theme.colors.primary};
+  transition: .35s ease-out;
 }
 
 a:hover {
-    color: #f44647;
+  color: ${theme.colors.secondary};
 }
 
 .section a {
-    font-weight: 700;
-    color: #f44647;
+  font-weight: 700;
+  color: ${theme.colors.secondary};
 }
 
 .section a:hover {
-    color: #000;
+  color: ${theme.colors.primary};
 }
 
 .doc-loader {
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    z-index: 99999;
-    background-color: #fff;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  background-color: #fff;
 }
 
 .block-right {
-    margin-right: -100px;
+  margin-right: -100px;
 }
 
 .block-right .block-right {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 img.block-right {
-    max-width: calc(100% + 100px);
+  max-width: calc(100% + 100px);
 }
 
 .content-670 {
-    max-width: 670px;
+  max-width: 670px;
 }
 
 .relative {
-    position: relative;
+  position: relative;
 }
 
 .page-wrapper {
-    pointer-events: auto;
-    width: 100%;
-    background-color: #fff0f0;
-    max-width: 800px;
+  pointer-events: auto;
+  width: 100%;
+  // background-color: #fff0f0;
+  max-width: 800px;
 }
 
 .section h2.title {
-    font-weight: 500;
-    font-size: 26px;
-    line-height: 150%;
-    letter-spacing: 5px;
-    margin-bottom: 40px;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 150%;
+  letter-spacing: 5px;
+  margin-bottom: 40px;
 }
 
 .section {
+  margin-top: 65px;
+  padding-top: 85px;
+}
+
+.sectionF {
     margin-top: 65px;
     padding-top: 85px;
 }
 
 .single .section {
-    min-height: 100vh;
+  min-height: 100vh;
 }
 
 .page-wrapper > section:first-of-type {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .page-wrapper > section:last-of-type {
-    padding-bottom: 85px;
+  padding-bottom: 85px;
 }
 
 .section .section-des {
-    margin-bottom: 40px;
-} */
-
+  margin-bottom: 40px;
+}
 
 /* ===================================
     2. Header / Menu CSS
@@ -173,7 +157,7 @@ img.block-right {
     left: 0;
     top: 0;
     position: absolute;
-    color: #f44647;
+    color: ${theme.colors.secondary};
 }
 
 .nav-count .pagination-sep {
@@ -191,7 +175,7 @@ img.block-right {
 }
 
 .nav-list li.current a {
-    color: #f44647;
+    color: ${theme.colors.secondary};
 }
 
 .nav-list li ul {
@@ -241,12 +225,12 @@ img.block-right {
     height: 2px;
     width: calc(100% - 5px);
     transition: .35s ease-out;
-    background-color: #000000;
+    background-color: ${theme.colors.primary};
 }
 
 .nav-container .site-title:hover:before {
     width: 0;
-    background-color: #f44647;
+    background-color: ${theme.colors.secondary};
 }
 
 .nav-btn {
@@ -302,7 +286,7 @@ img.block-right {
     transition: all 0.25s;
     margin-left: 0;
     top: 8px;
-    background-color: #000;
+    background-color: ${theme.colors.primary};
 }
 
 .nav-btn .nav-btn-cover:after, 
@@ -317,7 +301,7 @@ img.block-right {
     -webkit-transition: all 0.25s;
     transition: all 0.25s;
     top: 8px;
-    background-color: #000;
+    background-color: ${theme.colors.primary};
 }
 
 .nav-btn .nav-btn-cover:before {
@@ -364,7 +348,7 @@ img.block-right {
 
 #home .entry-title {
     position: absolute;
-    color: #f44647;
+    color: ${theme.colors.secondary};
     font-weight: 800;
     font-size: 110px;
     line-height: 113px;
@@ -420,7 +404,7 @@ img.block-right {
 }
 
 .serv-link-cover {
-    background-color: #f44647;
+    background-color: ${theme.colors.secondary};
     display: flex;
     align-items: center;
     padding: 50px 70px;
@@ -502,7 +486,7 @@ img.block-right {
 }
 
 .about-info {
-    background-color: #f44647;
+    background-color: ${theme.colors.secondary};
     color: #fff;
     width: 330px;
     padding: 50px 30px 50px 70px;
@@ -539,346 +523,19 @@ img.block-right {
 }
 
 .signature {
-    margin-top: 10px;
+    // width: 256px;
+    // margin-top: 10px;
+    width: 300px;
+    margin-top: -10px;
+    margin-left: -30px;
 }
-
-
-/* ===================================
-    6. Portfolio Section CSS
-====================================== */
-
-.isotope.no-transition,
-.isotope.no-transition .isotope-item,
-.isotope .isotope-item.no-transition {
-    -webkit-transition-duration: 0s;
-    -moz-transition-duration: 0s;
-    -ms-transition-duration: 0s;
-    -o-transition-duration: 0s;
-    transition-duration: 0s;
-}
-
-.grid {
-    width: 100%;    
-    position: relative;
-    display: block;
-    overflow: hidden;
-}
-
-.grid-item {
-    position: relative;
-    float: left;
-    font-size: 0;
-    line-height: 0;
-    box-sizing:border-box;
-    -moz-box-sizing:border-box;
-    -webkit-box-sizing:border-box;
-    overflow: hidden;    
-    width: 50%;
-    transition: opacity .3s;
-}
-
-.grid-item img {
-    display: block;
-    width: 100%;
-    height: auto;
-    max-height: none;
-    max-width: none;    
-}
-
-.grid-sizer,
-.grid-item {
-    width: 50%;
-}
-
-.grid-item.p-one {
-    width: 100%;
-}
-
-.grid-item.p-half {
-    width: 50%;
-}
-
-.portfolio-text-holder {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    z-index: 1;
-    font-size: 20px;
-    background-color: #000000;
-    padding: 20px;
-    transform: translateX(-100%);
-    transition: transform .3s ease;
-}
-
-.grid-item a.item-link:hover .portfolio-text-holder,
-.grid-item.portfolio-content-loading a.item-link .portfolio-text-holder {
-    transform: translateX(0);
-}
-
-#portfolio-grid.portfoio-items-mask .grid-item {
-    opacity: 0.2;
-}
-
-.grid-item.portfolio-content-loading {
-    opacity: 1 !important;
-}
-
-.portfolio-text-wrapper {
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-}
-
-.portfolio-text {
-    font-size: 28px;
-    line-height: 100%;
-    font-weight: 700;
-    color: #fff;
-    margin-bottom: 0;
-    padding-bottom: 10px;
-}
-
-.portfolio-cat {
-    font-size: 15px;
-    color: #fff;
-    line-height: 100%;
-    font-weight: 400;
-    margin-bottom: 0;
-}
-
-.portfolio-load-content-holder {
-    opacity: 0;
-    transform: translateY(70px);
-    transition: all .5s ease;
-}
-
-.portfolio-load-content-holder.show {
-    transform: translateY(0);
-    opacity: 1;
-}
-
-.portfolio-load-content-holder.show.viceversa {
-    opacity: 0;
-    transform: translateY(70px);
-}
-
-.portfolio-content-wrapper {
-    display: none;
-}
-
-.portfolio-content-wrapper.show {
-    display: block;
-}
-
-.close-icon {
-    /* background-image: url(images/close-left-arrow.png); */
-    background-repeat: no-repeat;
-    width: 70px;
-    height: 70px;
-    display: inline-block;
-    background-color: #f44647;
-    margin-bottom: 20px;
-    background-size: 70px;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.close-icon:hover {
-    background-position: -5px 0;
-}
-
-#portfolio-grid {
-    transition: all .5s ease;
-    opacity: 1;
-    transform: translateY(0px);
-}
-
-#portfolio-grid.hide {
-    opacity: 0;
-    transform: translateY(70px);    
-}
-
-.owl-carousel .owl-item {
-    width: 100%;
-}
-
-.owl-theme .owl-nav.disabled + .owl-dots {
-    margin-top: 13px;
-    margin-bottom: 40px;
-    line-height: 0;
-    text-align: left;
-}
-
-.owl-theme .owl-dots .owl-dot span {
-    margin: 0;
-    background-color: #000000;
-    transition: all .3s ease;
-    width: 30px;
-    height: 10px;
-    border-radius: 0;
-}
-
-.owl-theme .owl-dots .owl-dot {
-    transition: all .3s ease;
-    margin-right: 10px;
-}
-
-.owl-theme .owl-dots .owl-dot:hover span {
-    background-color: #000000;
-}
-
-.owl-theme .owl-dots .owl-dot.active span {
-    background-color: #f44647;
-}
-
-
-/* ===================================
-    6.1 Pretty Photo CSS
-====================================== */
-
-div.pp_default .pp_loaderIcon {
-    display: none !important;
-}
-
-div.pp_default a.pp_arrow_previous {
-    /* background-image: url(images/nav_left.png); */
-    background-size: 20px 20px;    
-    width: 20px;
-    height: 20px;
-    margin-top: 5px;
-    font-size: 0;
-    line-height: 0;
-    text-indent: -99999999px;
-    transition: transform .3s ease;
-}
-
-div.pp_default a.pp_arrow_next {
-    /* background-image: url(images/nav_right.png); */
-    background-size: 20px 20px;    
-    width: 20px;
-    height: 20px;
-    margin-top: 5px;
-    margin-left: 10px;
-    font-size: 0;
-    line-height: 0;
-    text-indent: -99999999px;
-    transition: transform .3s ease;
-}
-
-div.pp_default a.pp_arrow_previous:hover {
-    transform: translateX(-5px);
-}
-
-div.pp_default a.pp_arrow_next:hover {
-    transform: translateX(5px);
-}
-
-div.pp_default .pp_close {
-    /* background-image: url(images/close.png); */
-    background-size: 30px 30px;
-    margin-top: 5px;
-    text-indent: -99999999px;
-    font-size: 0;
-    line-height: 0;    
-}
-
-div.pp_default .pp_next:hover {
-    /* background: url(images/nav_right.png); */
-    cursor: pointer;
-    background-repeat: no-repeat;
-    background-position: 95% 50%;
-    background-size: 20px;
-}
-
-div.pp_default .pp_previous:hover {
-    /* background: url(images/nav_left.png); */
-    cursor: pointer;
-    background-repeat: no-repeat;
-    background-position: 5% 50%;
-    background-size: 20px;    
-}
-
-div.pp_default .pp_nav .currentTextHolder {
-    padding: 0 0 0 20px;
-    color: #fff;
-}
-
-div.pp_default .pp_content_container .pp_details {
-    margin-top: 30px !important;
-    z-index: 3;
-}
-
-div.pp_default .pp_description {
-    font-size: 15px;
-    line-height: 30px;
-    position: absolute;
-    top: -30px;
-    margin: 0;
-    color: #fff;
-    font-weight: 400;
-}
-
-
-/* ===================================
-    7. Blog Section CSS
-====================================== */
-
-.home-blog-list {
-    padding-right: 41px;
-}
-
-.home-blog-list li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 0;
-    min-height: 136px;
-}
-
-.home-blog-list li:last-child {
-    padding-bottom: 0;
-}
-
-.home-blog-list li + li {
-    border-top: 2px solid #fff;
-}
-
-.home-blog-list li a {
-    font-size: 26px;
-    margin-right: 30px;
-    color: #000;
-}
-
-.home-blog-list li a:hover {
-    color: #f44647;
-}
-
-.home-blog-list li .blog-list-info {
-    flex: 0 0 auto;
-    font-weight: 700;
-    font-size: 10px;
-    line-height: 14px;
-    letter-spacing: 3px;
-    min-width: 100px;
-}
-
-.home-blog-list li .blog-list-info .category {
-    color: #f44647;
-    margin-top: 6px;
-}
-
 
 /* ===================================
     8. Skills Section CSS
 ====================================== */
 
 .skills-history {
-    background-color: #f44647;
+    background-color: ${theme.colors.secondary};
     color: #fff;
     margin-top: 41px;
     padding: 63px 60px 62px 94px;
@@ -916,7 +573,13 @@ div.pp_default .pp_description {
 .skills-history li:hover .date {
     -webkit-transform: translateX(15px);
     transform: translateX(15px);
-    color: #000;
+    color: ${theme.colors.primary};
+}
+
+.skills-history li .company {
+    font-size: 13px;
+    font-weight: 100;
+    font-style: italic;
 }
 
 .skills-history li p {
@@ -932,12 +595,6 @@ div.pp_default .pp_description {
 .skills-history li:hover p {
     -webkit-transform: translateX(-15px);
     transform: translateX(-15px);
-}
-
-.skills-history li p .company{
-    font-style: italic;
-    font-weight: 100;
-    font-size: 13px;
 }
 
 .skills-progress {
@@ -966,14 +623,14 @@ div.pp_default .pp_description {
 .skills-progress .skill {
     width: 100%;
     height: 10px;
-    background-color: #ffd2d3;
+    background-color: ${theme.colors.secondaryLight};
     width: 63%;
 }
 
 .skills-progress .skill-fill {
     width: 10%;
     height: 10px;
-    background-color: #f44647;
+    background-color: ${theme.colors.secondary};
     transition: width .7s;
 }
 
@@ -1001,7 +658,7 @@ div.pp_default .pp_description {
     font-size: 12px;
     line-height: 25px;
     letter-spacing: 3px;
-    color: #000;
+    color: ${theme.colors.primary};
     background-color: transparent;
     border: 0;
     border-bottom: 2px solid;
@@ -1038,7 +695,7 @@ p.contact-submit-holder {
     vertical-align: middle;
     text-decoration: none;
     background-color: transparent;
-    color: #000;
+    color: ${theme.colors.primary};
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     width: 100%;
@@ -1055,7 +712,7 @@ p.contact-submit-holder {
 .contact-form input[type=email]::-webkit-input-placeholder, 
 .contact-form textarea::-webkit-input-placeholder {
     font-family: 'Poppins', sans-serif;
-    color: #000;
+    color: ${theme.colors.primary};
     font-weight: 400;
     font-size: 12px;
     line-height: 25px;    
@@ -1066,7 +723,7 @@ p.contact-submit-holder {
 .contact-form input[type=email]:-ms-input-placeholder, 
 .contact-form textarea:-ms-input-placeholder {
     font-family: 'Poppins', sans-serif;
-    color: #000;
+    color: ${theme.colors.primary};
     font-weight: 400;
     font-size: 12px;
     line-height: 25px;    
@@ -1077,119 +734,12 @@ p.contact-submit-holder {
 .contact-form input[type=email]::placeholder, 
 .contact-form textarea::placeholder {
     font-family: 'Poppins', sans-serif;
-    color: #000;
+    color: ${theme.colors.primary};
     font-weight: 400;
     font-size: 12px;
     line-height: 25px;
     opacity: 1;    
 }
-
-
-/* ===================================
-    10. Single Blog / Post Page CSS
-====================================== */
-
-.single-blog .entry-title {    
-    font-size: 32px;
-    line-height: 35px;
-    margin-bottom: 32px;
-}
-
-.single-blog .meta {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
-}
-
-.single-blog .meta li {    
-    font-weight: 700;
-    font-size: 10px;
-    line-height: 14px;
-    letter-spacing: 3px;
-}
-
-.single-blog .meta li + li {
-    margin-left: 25px;
-}
-
-.single-blog .meta li a {
-    color: #f44647;
-}
-
-.single-blog .meta li a:hover {
-    color: #000000;
-}
-
-.single-blog .thumbnail-img {
-    position: relative;
-    margin-bottom: 40px;
-}
-
-.single-blog .thumbnail-img:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    background: rgba(244, 70, 71, 0.04);
-}
-
-.single-blog .thumbnail-img img {
-    display: block;
-    width: 100%;
-}
-
-.single-blog .content-670 blockquote {
-    float: right;
-    background: #f44647;
-    color: #fff;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 30px;
-    padding: 40px 55px 50px;
-    width: 330px;
-    margin: 5px 0 30px 18px;
-}
-
-.single-blog .content-670 blockquote p {
-    margin: 0;
-}
-
-.single-blog .content-670 blockquote img {
-    margin-bottom: 27px;
-}
-
-.single-blog .soc-list {
-    margin-top: 60px;
-}
-
-.soc-list {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.soc-list li {
-    margin-right: 25px;
-}
-
-.soc-list li:last-child {
-    margin-right: 0;
-}
-
-.soc-list li a {
-    color: #000;
-    font-size: 12px;
-    line-height: 30px;
-    letter-spacing: 5px;
-}
-
-.soc-list li a:hover {
-    color: #f44647;
-}
-
 
 /* ===================================
     11. Responsive CSS
@@ -1334,7 +884,7 @@ p.contact-submit-holder {
 @media (max-width: 1020px) {
 
     body {
-        background: #fff0f0;
+        background: ${theme.colors.secondaryLight};
     }
 
 }
@@ -1635,3 +1185,6 @@ p.contact-submit-holder {
     }
 
 }
+`;
+
+export default GlobalStyle;
