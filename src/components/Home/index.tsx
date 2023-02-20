@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 
 import ImagePerson from "./assets/photo-1.png";
 import ScrollIcon from "./assets/scroll-icon.svg";
