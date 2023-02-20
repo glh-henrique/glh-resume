@@ -1,4 +1,5 @@
-import React, { lazy, useState } from "react";
+import React, { useState } from "react";
+import Social from "../Social";
 
 const Header = (): JSX.Element => {
   const [openNav, setOpenNav] = useState(false);
@@ -31,32 +32,16 @@ const Header = (): JSX.Element => {
               <li>
                 <a href="#home">Home</a>
               </li>
-              {/* <li>
-                <a href="#services">Services</a>
-              </li> */}
               <li>
                 <a href="#about">About</a>
               </li>
               <li>
                 <a href="#skills">Skills</a>
               </li>
-              {/* <li>
-                <a href="#social">Social</a>
-              </li> */}
             </ul>
           </nav>
         </div>
-        <ul className="nav-soc">
-          <li>
-            <a href="https://github.com/glh-henrique" target="_blank" rel="noreferrer">GIT.</a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/glhhenrique/" target="_blank" rel="noreferrer">IN.</a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com/glhhenrique/" target="_blank" rel="noreferrer">IG.</a>
-          </li>
-        </ul>
+        <Social />
       </div>
     </>
   );

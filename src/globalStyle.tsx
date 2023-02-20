@@ -1,4 +1,8 @@
 import { createGlobalStyle } from "styled-components";
+import "./assets/css/clear.css"
+import "./assets/css/jarallax.css"
+import "./assets/css/bootstrap-grid.css"
+
 import { theme } from "./theme";
 
 const GlobalStyle = createGlobalStyle`
@@ -194,7 +198,7 @@ img.block-right {
 }
 
 .nav-soc li {
-    margin-right: 25px;
+    margin-right: 15px;
 }
 
 .nav-soc li:last-child {
@@ -202,9 +206,12 @@ img.block-right {
 }
 
 .nav-soc li a {
-    font-size: 12px;
+    width: 35px;
+    height: 35px;
+    display: block;
+    // font-size: 12px;
     line-height: 30px;
-    letter-spacing: 5px;
+    // letter-spacing: 5px;
 }
 
 .nav-container .site-title {
@@ -841,7 +848,7 @@ p.contact-submit-holder {
 
     .nav-soc {
         left: 15px;
-        bottom: 15px;
+        bottom: 65px;
     }
 
     .nav-container {

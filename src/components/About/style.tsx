@@ -1,6 +1,28 @@
 import styled from "styled-components";
 import { theme } from "../../theme";
 
+export const StyledLiSocial = styled.li`
+  margin-top: 44px;
+
+  ul.nav-soc {
+    display: flex;
+    height: 35px;
+    position: relative;
+    top: 0;
+    left: 0;
+
+    li {
+      margin-top: 0;
+
+      a {
+        &:hover {
+          padding: 0;
+        }
+      }
+    }
+  }
+`;
+
 export const StyledLi = styled.li`
   display: flex;
   flex-direction: column;

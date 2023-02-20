@@ -1,9 +1,13 @@
 import React from "react";
 import Signature from "./assets/signature.svg";
 import AboutImg from "./assets/about-img.png";
-// import { ButtonDownload, StyledLi } from "./style";
+import Social from "../Social";
+import { StyledLiSocial } from "./style";
 
 const About = (): JSX.Element => {
+  const { innerWidth: width } = window;
+  console.log(width);
+
   return (
     <section id="about" className="section">
       <h2 className="title">ABOUT</h2>
@@ -42,6 +46,13 @@ const About = (): JSX.Element => {
           <h6>PHONE</h6>
           <a href="tel:+987987654321">(+353) 087 153 1497</a>
         </li>
+        {width < 1199 && (
+          <StyledLiSocial>
+            <h6>Follow me!</h6>
+            <Social iconType="blue" />
+          </StyledLiSocial>
+        )}
+
         {/* <StyledLi>
           <ButtonDownload>
             DOWNLOAD CV
@@ -53,18 +64,16 @@ const About = (): JSX.Element => {
 
       <div className="about-text content-670">
         <p>
-          Hi! My name is Guilherme and I'm really happy that you're
-          reading this! I'm 31 years old and currently living in Dublin. Like
-          every good Brazilian, I'm a cheerful and persevering person who loves
-          a good beer! Hahaha. In addition, I love reading comics, biking,
-          hiking, and playing basketball. I'm passionate about what I do - I've
-          been a frontend developer for years and I love coding. I always
-          dedicate myself a lot and strive to do my best in everything I do. I
-          have a great interest in music, history, and technology, and I believe
-          it's important to always be learning and developing. 
+          Hi! My name is Guilherme and I'm really happy that you're reading
+          this! I'm 31 years old and currently living in Dublin. Like every good
+          Brazilian, I'm a cheerful and persevering person who loves a good
+          beer! Hahaha. In addition, I love reading comics, biking, hiking, and
+          playing basketball. I'm passionate about what I do - I've been a
+          frontend developer for years and I love coding. I always dedicate
+          myself a lot and strive to do my best in everything I do. I have a
+          great interest in music, history, and technology, and I believe it's
+          important to always be learning and developing.
           <br />
-          <br />
-          Follow me on social media!
         </p>
       </div>
 
