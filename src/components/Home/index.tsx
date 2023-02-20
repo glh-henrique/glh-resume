@@ -21,7 +21,7 @@ const Home = (): JSX.Element => {
           src={ImagePerson}
           alt="person"
         />
-        <a href="#services" className="main-btn slow-scroll">
+        <a href="#about" className="main-btn slow-scroll">
           <img src={ScrollIcon} alt="arrow to scroll down" />
         </a>
       </div>
