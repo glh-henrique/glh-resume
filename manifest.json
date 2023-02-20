@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Guilherme's Resume",
+  "name": "Guilherme's Resume",
+  "description": "apllication to show my resume by Guilherme H. Ricardo",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +21,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#bf7f00",
   "background_color": "#ffffff"
 }
