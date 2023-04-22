@@ -96,6 +96,22 @@ const Skills = () => {
             new technologies.
           </p>
         </li>
+
+        <li>
+          <span className="date">2023</span>
+          <p>
+            <div>
+              <strong>Senior Frontend Engineer</strong>
+            </div>
+            <div className="company">NEX T Engineering</div>
+            <strong>2023 - At Moment</strong> NEX T Engineering engages in
+            technological consulting. As a senior developer working on a real
+            estate project, stay updated on industry trends, communicate
+            effectively with your team, prioritize your work and manage your
+            time, test your code thoroughly, and continuously improve your
+            skills and knowledge.
+          </p>
+        </li>
       </ul>
 
       <ul className="skills-progress">
